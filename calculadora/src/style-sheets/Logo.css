@@ -1,0 +1,12 @@
+.FCC-logo-contenedor {
+    width: 100%;
+    height: 50px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .FCC-logo {
+    height: 40px;
+  }
