@@ -2,14 +2,16 @@ import React from "react";
 import "../style-sheets/Tarea.css"
 import { FaWindowClose } from 'react-icons/fa';
 
-function Tarea( { texto }) {
+function Tarea( { id, texto, completada, completarTarea, eliminarTarea }) {
 return (
-  <div className="tarea-contenedor">
-    <div className="tarea-texto">
+  <div className={completada ? "tarea-contenedor completada" : "tarea-contenedor"}>
+    <div className="tarea-texto"
+    onClick={() => completarTarea(id)}>
       {texto}
     </div>
-    <div className="tarea-icono">
-     <FaWindowClose />
+    <div className="tarea-contenedor-iconos"
+    onClick={()=> eliminarTarea(id)}>
+     <FaWindowClose className="tarea-icono" />
     </div>
   </div>
 )
